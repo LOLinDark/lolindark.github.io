@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ryan Bayne - Developer & Creator</title>
+    <title>LOLinDark - Developer & Creator</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
             <div class="nav-content">
-                <a href="/" class="logo">RB</a>
+                <a href="/" class="logo">
+                    <span class="logo-lol">LOL</span><span class="logo-dark">DARK</span>
+                </a>
                 <ul class="nav-links">
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="https://github.com/LOLinDark" target="_blank" class="btn-secondary">GitHub</a></li>
+                    <li><a href="https://github.com/LOLinDark" target="_blank" class="nav-github">GitHub</a></li>
                 </ul>
             </div>
         </div>
@@ -27,14 +29,21 @@
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-lights"></div>
         <div class="container">
             <div class="hero-content">
-                <h1>Ryan Bayne</h1>
-                <p class="tagline">Full-Stack Developer | Creator | Open Source Contributor</p>
-                <p class="description">Crafting innovative digital experiences with React, Node.js, and modern web technologies.</p>
+                <h1 class="hero-title">
+                    <span class="title-lol">LOL</span><br>
+                    <span class="title-dark">DARK</span>
+                </h1>
+                <p class="tagline">Full-Stack Developer • Creator • Problem Solver</p>
+                <p class="description">Building next-gen applications with modern tech and dynamic design. Specializing in React, Node.js, and innovative digital experiences.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="https://github.com/LOLinDark" target="_blank" class="btn btn-secondary">GitHub Profile</a>
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-glow"></span>
+                        View Projects
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Connect Now</a>
                 </div>
             </div>
         </div>
@@ -48,12 +57,13 @@
             <div class="projects-grid">
                 <!-- OmniCore Card -->
                 <div class="project-card featured">
+                    <div class="card-glow"></div>
                     <div class="project-header">
                         <h3>OMNI-CORE</h3>
                         <span class="badge badge-primary">React • Vite • Node.js</span>
                     </div>
                     <p class="project-description">
-                        Citizen Operations & Intelligence Network — A comprehensive Star Citizen companion dashboard featuring ship database, HOTAS configuration tools, and real-time analytics.
+                        Citizen Operations & Intelligence Network — A comprehensive Star Citizen companion dashboard with ship database, HOTAS configuration, and real-time analytics.
                     </p>
                     <div class="project-features">
                         <span class="feature">🚀 Ship Database</span>
@@ -69,28 +79,30 @@
 
                 <!-- Placeholder Projects -->
                 <div class="project-card">
+                    <div class="card-glow"></div>
                     <div class="project-header">
-                        <h3>Project #2</h3>
-                        <span class="badge">Coming Soon</span>
+                        <h3>Next Project</h3>
+                        <span class="badge badge-secondary">Coming Soon</span>
                     </div>
                     <p class="project-description">
-                        Exciting new project in development. Check back soon for updates.
+                        Exciting new project in development. Combining cutting-edge technologies with creative design principles.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="btn btn-small btn-secondary disabled">Placeholder</a>
+                        <a href="#" class="btn btn-small btn-secondary disabled">Loading...</a>
                     </div>
                 </div>
 
                 <div class="project-card">
+                    <div class="card-glow"></div>
                     <div class="project-header">
-                        <h3>Project #3</h3>
-                        <span class="badge">Coming Soon</span>
+                        <h3>Innovation Hub</h3>
+                        <span class="badge badge-secondary">In Development</span>
                     </div>
                     <p class="project-description">
-                        More innovative projects coming soon. Stay tuned!
+                        Building tools and applications that push boundaries. More details coming as projects mature.
                     </p>
                     <div class="project-links">
-                        <a href="#" class="btn btn-small btn-secondary disabled">Placeholder</a>
+                        <a href="#" class="btn btn-small btn-secondary disabled">Stay Tuned</a>
                     </div>
                 </div>
             </div>
@@ -103,17 +115,17 @@
             <div class="about-content">
                 <h2>About</h2>
                 <p>
-                    I'm a full-stack developer passionate about building scalable applications and meaningful digital experiences. 
-                    With expertise in modern JavaScript frameworks, cloud architecture, and open-source development, I focus on 
-                    creating tools that solve real problems.
+                    I'm a developer and creator passionate about building scalable applications and meaningful digital experiences. 
+                    With expertise in modern JavaScript, React ecosystem, Node.js backends, and cloud architecture, I focus on 
+                    creating tools that solve real problems and deliver exceptional user experiences.
                 </p>
                 <p>
-                    My current work includes <strong>OMNI-CORE</strong>, a comprehensive companion dashboard for Star Citizen, 
-                    and various open-source contributions to the developer community.
+                    My current work centers on <strong>OMNI-CORE</strong>, a comprehensive companion dashboard for Star Citizen, 
+                    alongside various open-source contributions and innovative side projects.
                 </p>
                 
                 <div class="skills-section">
-                    <h3>Technical Skills</h3>
+                    <h3>Technical Stack</h3>
                     <div class="skills-grid">
                         <div class="skill-group">
                             <h4>Frontend</h4>
@@ -121,7 +133,7 @@
                                 <li>React 18+</li>
                                 <li>Vite</li>
                                 <li>Zustand</li>
-                                <li>Mantine UI</li>
+                                <li>TanStack Query</li>
                             </ul>
                         </div>
                         <div class="skill-group">
@@ -134,21 +146,21 @@
                             </ul>
                         </div>
                         <div class="skill-group">
-                            <h4>DevOps</h4>
+                            <h4>DevOps & Tools</h4>
                             <ul>
                                 <li>GitHub Actions</li>
                                 <li>Docker</li>
-                                <li>GitHub Pages</li>
-                                <li>CI/CD</li>
+                                <li>CI/CD Pipelines</li>
+                                <li>Performance Tuning</li>
                             </ul>
                         </div>
                         <div class="skill-group">
-                            <h4>Other</h4>
+                            <h4>Design & Creative</h4>
                             <ul>
-                                <li>Git</li>
+                                <li>UI/UX Design</li>
                                 <li>PWA Development</li>
-                                <li>Performance Optimization</li>
-                                <li>Agile Development</li>
+                                <li>Responsive Design</li>
+                                <li>Animations & Effects</li>
                             </ul>
                         </div>
                     </div>
@@ -161,7 +173,7 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2>Get In Touch</h2>
-            <p class="contact-intro">Have a project in mind or want to collaborate? I'd love to hear from you.</p>
+            <p class="contact-intro">Have a project in mind or want to collaborate? Let's connect.</p>
             
             <div class="contact-links">
                 <a href="https://github.com/LOLinDark" target="_blank" class="contact-card">
@@ -169,15 +181,15 @@
                     <h3>GitHub</h3>
                     <p>@LOLinDark</p>
                 </a>
-                <a href="mailto:ryan@example.com" class="contact-card">
+                <a href="mailto:contact@lolindark.dev" class="contact-card">
                     <div class="contact-icon">✉️</div>
                     <h3>Email</h3>
-                    <p>Get in touch</p>
+                    <p>Let's talk</p>
                 </a>
-                <a href="https://linkedin.com" target="_blank" class="contact-card">
-                    <div class="contact-icon">💼</div>
-                    <h3>LinkedIn</h3>
-                    <p>Connect with me</p>
+                <a href="https://twitter.com" target="_blank" class="contact-card">
+                    <div class="contact-icon">🎮</div>
+                    <h3>Twitch</h3>
+                    <p>Stream soon</p>
                 </a>
             </div>
         </div>
@@ -186,8 +198,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 Ryan Bayne. All rights reserved.</p>
-            <p class="footer-note">Crafted with <span class="heart">❤️</span> using modern web technologies</p>
+            <p>&copy; 2026 LOLinDark. All rights reserved.</p>
+            <p class="footer-note">Crafted with <span class="heart">💜</span> and modern web technologies</p>
         </div>
     </footer>
 

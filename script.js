@@ -12,42 +12,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add animation on scroll
+// Enhanced scroll animations with stagger effect
 const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    rootMargin: '0px 0px -100px 0px'
 };
 
 const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
         if (entry.isIntersecting) {
-            entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+            setTimeout(() => {
+                entry.target.style.animation = 'fadeInUp 0.6s ease-out forwards';
+                entry.target.style.opacity = '1';
+            }, index * 100);
             observer.unobserve(entry.target);
         }
     });
 }, observerOptions);
 
-// Observe project cards and sections
-document.querySelectorAll('.project-card, .skill-group, .contact-card').forEach(el => {
+// Observe elements
+document.querySelectorAll('.project-card, .skill-group, .contact-card, .btn').forEach(el => {
     el.style.opacity = '0';
     observer.observe(el);
 });
-
-// Add fade-in-up animation
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(20px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-`;
-document.head.appendChild(style);
 
 // Add active nav link on scroll
 window.addEventListener('scroll', () => {
@@ -56,15 +43,68 @@ window.addEventListener('scroll', () => {
     
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
-        if (scrollY >= sectionTop - 200) {
+        if (window.scrollY >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
 
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-links a[href^="#"]').forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
+            link.style.color = 'var(--primary)';
+        } else {
+            link.style.color = 'var(--text)';
         }
     });
 });
+
+// Add parallax effect on hero section
+window.addEventListener('scroll', () => {
+    const hero = document.querySelector('.hero');
+    if (hero) {
+        const scrollPosition = window.scrollY;
+        hero.style.transform = `translateY(${scrollPosition * 0.5}px)`;
+    }
+});
+
+// Button click ripple effect
+document.querySelectorAll('.btn').forEach(button => {
+    button.addEventListener('click', function(e) {
+        const ripple = document.createElement('span');
+        const rect = this.getBoundingClientRect();
+        const size = Math.max(rect.width, rect.height);
+        const x = e.clientX - rect.left - size / 2;
+        const y = e.clientY - rect.top - size / 2;
+        
+        ripple.style.cssText = `
+            position: absolute;
+            width: ${size}px;
+            height: ${size}px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            left: ${x}px;
+            top: ${y}px;
+            animation: ripple-animation 0.6s ease-out;
+            pointer-events: none;
+        `;
+        
+        this.style.position = 'relative';
+        this.style.overflow = 'hidden';
+        this.appendChild(ripple);
+        
+        setTimeout(() => ripple.remove(), 600);
+    });
+});
+
+// Add ripple animation
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes ripple-animation {
+        to {
+            transform: scale(4);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
