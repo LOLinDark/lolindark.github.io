@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LOLinDark - Developer & Creator</title>
+    <title>LOLinDark - OmniCore Portal</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="announcement-ribbon">
+        <div class="container ribbon-content">
+            <span class="ribbon-label">Update</span>
+            <p>Looking for the app? OmniCore now runs at <a href="https://lolindark.github.io/StarCitizen-OmniCore/">/StarCitizen-OmniCore/</a>.</p>
+            <a class="ribbon-cta" href="https://lolindark.github.io/StarCitizen-OmniCore/">Launch</a>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -19,6 +27,7 @@
                 </a>
                 <ul class="nav-links">
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#testing">Testing</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                     <li><a href="https://github.com/LOLinDark" target="_blank" class="nav-github">GitHub</a></li>
@@ -35,14 +44,14 @@
                 <h1 class="hero-title">
                     <span class="title-dark">LOLinDark</span>
                 </h1>
-                <p class="tagline">Full-Stack Developer • Creator • Problem Solver</p>
-                <p class="description">Building next-gen applications with modern tech and dynamic design. Specializing in React, Node.js, and innovative digital experiences.</p>
+                <p class="tagline">OmniCore Command Portal</p>
+                <p class="description">This is the central entry point for OmniCore, documentation, and community testing. Launch the app, follow the HOTAS test routine, and submit structured feedback in one place.</p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="https://lolindark.github.io/StarCitizen-OmniCore/" class="btn btn-primary">
                         <span class="btn-glow"></span>
-                        View Projects
+                        Launch OmniCore
                     </a>
-                    <a href="#contact" class="btn btn-secondary">Connect Now</a>
+                    <a href="#testing" class="btn btn-secondary">Join Community Testing</a>
                 </div>
             </div>
         </div>
@@ -72,6 +81,7 @@
                     </div>
                     <div class="project-links">
                         <a href="https://lolindark.github.io/StarCitizen-OmniCore/" class="btn btn-small btn-primary">Live App</a>
+                        <a href="https://lolindark.github.io/StarCitizen-OmniCore/developer-guide/" class="btn btn-small btn-secondary">Developer Guide</a>
                         <a href="https://github.com/LOLinDark/StarCitizen-OmniCore" class="btn btn-small btn-secondary">Repository</a>
                     </div>
                 </div>
@@ -108,6 +118,34 @@
         </div>
     </section>
 
+    <!-- Community Testing Section -->
+    <section id="testing" class="testing">
+        <div class="container">
+            <h2>Community Testing Program</h2>
+            <p class="testing-intro">Help validate OmniCore updates with a guided card-based routine designed for first-time users and contributors.</p>
+
+            <div class="testing-grid">
+                <div class="test-card">
+                    <h3>1. Open the Guide</h3>
+                    <p>Launch OmniCore and open the HOTAS Test Guide from the bookmark bar inside the app.</p>
+                </div>
+                <div class="test-card">
+                    <h3>2. Run the Steps</h3>
+                    <p>Follow each test card from baseline setup through per-mode binding validation and regression checks.</p>
+                </div>
+                <div class="test-card">
+                    <h3>3. Submit Feedback</h3>
+                    <p>Send one final report. Bugs and faults route to GitHub issues; pass and general feedback route through VerseMail.</p>
+                </div>
+            </div>
+
+            <div class="testing-cta">
+                <a href="https://lolindark.github.io/StarCitizen-OmniCore/" class="btn btn-primary">Start Testing in OmniCore</a>
+                <a href="https://github.com/LOLinDark/StarCitizen-OmniCore/issues" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">View Open Issues</a>
+            </div>
+        </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
@@ -120,7 +158,7 @@
                 </p>
                 <p>
                     My current work centers on <strong>OMNI-CORE</strong>, a comprehensive companion dashboard for Star Citizen, 
-                    alongside various open-source contributions and innovative side projects.
+                    alongside community-driven testing workflows and open-source contributions.
                 </p>
                 
                 <div class="skills-section">

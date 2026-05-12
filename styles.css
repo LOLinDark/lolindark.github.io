@@ -1,10 +1,10 @@
 :root {
-    /* Purple Twitch-inspired palette */
-    --primary: #9146FF;
-    --primary-dark: #7B2CBF;
-    --primary-light: #B575FF;
-    --secondary: #00D4FF;
-    --accent: #FF006E;
+    /* OmniCore portal palette */
+    --primary: #0f7c8a;
+    --primary-dark: #0a5963;
+    --primary-light: #2ba8b8;
+    --secondary: #f2b84b;
+    --accent: #5ed3f3;
     --success: #00FF41;
     
     /* Dark mode */
@@ -40,8 +40,8 @@ body {
     color: var(--text);
     background-color: var(--background);
     background-image: 
-        radial-gradient(circle at 20% 50%, rgba(145, 70, 255, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 50%, rgba(15, 124, 138, 0.16) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(242, 184, 75, 0.08) 0%, transparent 50%);
     background-attachment: fixed;
     line-height: 1.6;
 }
@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
     line-height: 1.2;
     margin-bottom: 1rem;
-    background: linear-gradient(135deg, #9146FF 0%, #00D4FF 100%);
+    background: linear-gradient(135deg, #f2b84b 0%, #5ed3f3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -94,6 +94,59 @@ code, pre {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
+}
+
+/* Announcement Ribbon */
+.announcement-ribbon {
+    background: linear-gradient(90deg, rgba(242, 184, 75, 0.2), rgba(94, 211, 243, 0.2));
+    border-bottom: 1px solid rgba(94, 211, 243, 0.3);
+}
+
+.ribbon-content {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-height: 44px;
+    flex-wrap: wrap;
+}
+
+.ribbon-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.15rem 0.5rem;
+    border-radius: 999px;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-weight: 700;
+    color: #0a0e27;
+    background: #f2b84b;
+}
+
+.ribbon-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.ribbon-content a {
+    color: #8de3ff;
+}
+
+.ribbon-cta {
+    margin-left: auto;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.35rem 0.7rem;
+    border-radius: 999px;
+    border: 1px solid rgba(94, 211, 243, 0.5);
+    color: #8de3ff;
+    transition: var(--transition);
+}
+
+.ribbon-cta:hover {
+    background: rgba(94, 211, 243, 0.18);
 }
 
 /* Navbar */
@@ -245,11 +298,56 @@ code, pre {
 }
 
 .title-dark {
-    background: linear-gradient(135deg, #9146FF 0%, #00D4FF 100%);
+    background: linear-gradient(135deg, #f2b84b 0%, #5ed3f3 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     text-shadow: 0 0 30px rgba(145, 70, 255, 0.3);
+}
+
+/* Community Testing Section */
+.testing {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, rgba(15, 124, 138, 0.08) 0%, rgba(10, 14, 39, 1) 60%);
+    border-top: 1px solid rgba(94, 211, 243, 0.18);
+    border-bottom: 1px solid rgba(94, 211, 243, 0.18);
+}
+
+.testing-intro {
+    max-width: 760px;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.testing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.test-card {
+    background: linear-gradient(160deg, rgba(35, 45, 82, 0.9), rgba(26, 31, 58, 0.9));
+    border: 1px solid rgba(94, 211, 243, 0.2);
+    border-radius: 12px;
+    padding: 1.25rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.test-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.test-card p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+.testing-cta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
 }
 
 @keyframes glow-yellow {
